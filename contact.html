@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3202b48a39.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3202b48a39.js" crossorigin="anonymous"></script>
+    <script src="scripts/script-contact.js" defer></script>
+    <title>Contact Form</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h1 class="logo"><a href="index.html">Bita Peis</a></h1>
+            <ul>
+                <li><a href="history.html">History</a></li>
+                <li><a href="discography.html">Discography</a></li>
+                <li><a href="tours.html">Tours/Lives</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="contact-container">
+        <div class="wrapper">
+            <form id="contact-form">
+                <div class="row">
+                    <input name="name" type="text" class="feedback-input" placeholder="Name" />
+                    <span id="nameError" class="error"></span>
+                </div>
+                <div class="row">
+                    <input name="email" type="text" class="feedback-input" placeholder="Email" />
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div class="row">
+                    <textarea name="comments" class="feedback-input" placeholder="Comments"></textarea>
+                    <span id="commentsError" class="error"></span>
+                </div>
+                <div class="row">
+                    <input type="text" name="phone" class="feedback-input" placeholder="Phone"></input>
+                    <span id="phoneError" class="error"></span>
+                </div>
+                <input type="submit" value="SUBMIT"/>
+
+                <div id="successMessage" class="success">
+
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
