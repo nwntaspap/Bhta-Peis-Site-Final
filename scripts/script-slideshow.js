@@ -1,16 +1,18 @@
 window.addEventListener('DOMContentLoaded', () => {
     const images = [
-        '23-05-2015',
-        '17-08-2015',
-        '27-12-2015',
-        '29-06-2018',
-        '23-08-2018',
-        '13-11-2021',
-        '27-12-2021',
-        '09-07-2022',
-        '23-12-2022',
-        '27-12-2022',
 
+        "10175032_1021767277887362_2116005801278748435_n.jpg",
+        "10257681_693597100704383_3044022837109853148_n.jpg",
+        "10293592_710050782392348_2661702912602225989_o.jpg",
+        "10379792_720460764684683_2923294556692325036_o.jpg",
+        "10675577_828930987170993_3407514007128249125_n.jpg" ,
+        "11214074_920349728029118_5308694713849927621_n.jpg",
+        "12342610_1007916912605732_6987583324987426393_n.jpg" ,
+        "13524346_1139356139461808_1786388938349425221_n.jpg",
+        "1398807_613248085405952_692651599_o.jpg",
+        "737741_457415094322586_1910692280_o.jpg",
+        "75497675_2687070171357056_9141408053503983616_n.jpg",
+        "904716_604159192981508_1897617339_o.jpg"
     ];
     let currentImageIndex = 0;
     let sliderInterval = null;
@@ -27,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
          const slideImage = document.querySelector('#carousel img.slide');
         //  const thubnailsContainer = document.querySelector('#thubnailsContainer');
 
-         slideImage.src = './images/Slideshow/' + currentImage;
+         slideImage.src = './images/Συναυλίες/' + currentImage;
          thubnailsContainer.innerHTML = '';
          images.forEach((image, index) => {
              let classNames = 'dot';
@@ -38,7 +40,7 @@ window.addEventListener('DOMContentLoaded', () => {
              let img = document.createElement('img');
              img.className = classNames;
              img.onclick = () => makeImageCurrent(index);
-             img.src = `./images/${image}`;
+             img.src = `./images/Συναυλίες/${image}`;
 
              thubnailsContainer.appendChild(img)
          });
