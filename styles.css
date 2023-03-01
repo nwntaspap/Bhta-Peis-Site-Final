@@ -27,6 +27,7 @@ a {
     top: 0;
     background: #333;
     /* opacity: 0.9; */
+    z-index: 10;
     overflow: auto;
     display: flex;
     justify-content: space-between;
@@ -86,7 +87,7 @@ a {
     padding-top: 60px;
     padding-bottom: 20px;
     text-align: center;
-    font-size: 5rem;
+    font-size: 5.5rem;
     margin: 20px 0;
     /* color: rgb(207, 125, 19); */
     color: rgb(170, 7, 179);
@@ -191,7 +192,7 @@ a {
 }
 
 .latest-live {
-    width: 50%;
+    width: 60%;
     text-align: center;
     overflow: hidden;
 }
@@ -203,15 +204,17 @@ a {
 .latest-live p {
     text-align: center;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0 auto;
     color: rgb(22, 137, 28);
+    text-shadow: 1px 1px black;
 }
 
 .latest-disk, .latest-live h3 {
     font-size: 1.5rem;
     margin: 10px auto;
     color: rgb(22, 137, 28);
+    text-shadow: 2.5px 2.5px black;
 }
 
 footer {
@@ -264,22 +267,24 @@ footer {
 
 .img-history h1 {
     padding-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     text-align: center;
-    font-size: 4.5rem;
-    /* color: rgb(207, 125, 19); */
+    font-size: 5rem;
     color: rgb(143, 23, 149);
     font-family: 'Playfair Display', serif;
     animation: shine 3s infinite linear;
-    /* animation-fill-mode: forwards;
-    -webkit-text-size-adjust: none; */
-    background: linear-gradient(to right, #504f4f 0, white 10%, #4d4d4d 20%);
+    background: linear-gradient(to right, #4d4d4d 0, white 5%, #8F1795 20%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    -webkit-text-size-adjust: none;
 }
 
-/* @keyframes shine {
+@keyframes shine {
     0% {
         background-position: 200px;
-        background-color: #000;
     }
     60% {
         background-position: 400px;
@@ -287,7 +292,12 @@ footer {
     100% {
         background-position: 800px;
     }
-  } */
+  }
+.img-history .big {
+    font-size: 23px;
+    font-weight: bold;
+    font-style: italic;
+}
 .img-history p {
     padding: 30px;
     text-align: center;
@@ -380,6 +390,18 @@ footer {
 }
 /*---------- Tours/Lives Section ----------*/
 /* Slideshow container */
+.background-container {
+    height: 100vh;
+    background-color: black;
+}
+
+.background-container h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 30px;
+    margin: 0 5px 0 0;
+    color: rgb(143, 23, 149);
+}
 .carousel-container {
     width: 100%;
     max-width: 960px;
@@ -484,17 +506,24 @@ footer {
     background: black;
 }
 
-.grid-gallery {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-template-rows: masonry;
+/* #tours-container h2 {
+    font-size: 3rem;
+    color: rgb(143, 23, 149);
+    text-align: center;
+} */
+
+#tours-container .flex-gallery {
+    height: 100vh;
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.grid-gallery img {
-    display: inline-block;
-    grid-column-end: span 2;
-    width: 800px;
-    height: auto;
+#tours-container img {
+    /* display: inline-block; */
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
 }
 /*---------- Contact Form Section ----------*/
 #contact-container {
